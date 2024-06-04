@@ -1,0 +1,17 @@
+executable("hello") {
+  sources = [
+    "src/hello.cc",
+  ]
+
+  deps = [
+    ":hello_static",
+    "//third_party/mini_chromium:base"
+  ]
+}
+
+static_library("hello_static") {
+  sources = [
+    "src/hello_static.cc",
+    "src/hello_static.h",
+  ]
+}
